@@ -19,9 +19,9 @@
 	; Increment the value in the C register
 	INR C
 
-AHEAD:
+
 	; Store the result from the accumulator (A) into memory address 802H
-	STA 802H
+AHEAD:	STA 802H
 
 	; Move the content of the C register into the accumulator (A)
 	MOV A, C

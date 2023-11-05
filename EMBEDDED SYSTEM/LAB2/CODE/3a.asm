@@ -10,9 +10,9 @@ START:
        MVI B, 0AH
 
 ; Define a label "NEXT"
-NEXT: 
+ 
        ; Load the accumulator (A) with the byte at the memory address pointed to by HL
-       MOV A, M
+NEXT:  MOV A, M
 
        ; Store the value in the accumulator (A) into the memory location pointed to by DE
        STAX D
