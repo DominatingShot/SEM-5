@@ -14,3 +14,4 @@ int main(){
     reversenum(n);
     return 0;
 }
+#(O(\log_{10}(n)))
