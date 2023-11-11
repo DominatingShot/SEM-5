@@ -12,3 +12,7 @@ void insertionsort(vector<int> &v){
         v[j+1] = key;
     }
 }
+
+#a. O(n^2)
+#b. Flag
+#c. Best: Sorted, Worst: Reverse
