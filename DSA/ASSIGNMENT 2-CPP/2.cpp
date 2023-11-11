@@ -12,3 +12,7 @@ void selectionsort(vector<int> &v){
         swap(v[i],v[min]);
     }
 }
+
+#a. O(n^2)  
+#b. Same  
+#c. Best: Sorted, Worst: Reverse
