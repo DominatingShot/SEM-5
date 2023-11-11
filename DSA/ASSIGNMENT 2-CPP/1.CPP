@@ -10,3 +10,7 @@ void bubblesort(vector<int> &v){
         }
     }
 }
+
+# a. O(n^2)
+# b. Flag
+# c. Best: Sorted, Worst: Reverse
