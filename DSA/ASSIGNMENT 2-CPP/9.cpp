@@ -9,3 +9,5 @@ int fib(int n,int a=1,int b=1){
     }
     return fib(n-1,b,a+b);
 }
+# O(2^n)
+ 
