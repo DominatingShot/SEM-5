@@ -6,3 +6,4 @@ int proofn(int n){
     }
     return n*proofn(n-1);
 }
+# O(n)
