@@ -1,0 +1,35 @@
+LXI B,0AH
+LXI H,4000H
+MVI A,00
+LABEL:  ADD M
+    INX H
+    DCR B
+    JZ STOP
+    JNZ LABEL
+STOP:   SHLD 4501H
+    MOV A,00
+    MOV C,A
+    JMP CHECK
+EVEN:   MOV A,01
+    MOV C,A
+CHECK:  LDA 4501H
+    RLC
+    JZ SKIP
+    MOV A,C
+    ADD H
+    MOV H,A
+SKIP:   MOV A,L
+    SHLD 4503H
+    LDA 4501H
+    MOV B,A
+    MVI C,00H
+NEXT:   CMP B
+    JC LOOP
+    SUB B
+    INR C
+    JMP NEXT
+LOOP:   STA 4504H
+    MOV A,C
+    STA 4505H
+    JMP HALT
+HALT:   HLT
