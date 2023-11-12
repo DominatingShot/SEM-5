@@ -7,3 +7,4 @@ void print (vector<int> &v,int i){
     print(v,i-1);
     cout<<v[i-1]<<" ";
 }
+#O(n)

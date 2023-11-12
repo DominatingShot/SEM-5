@@ -6,3 +6,4 @@ int pow(int x,int y){
     }
     return x*pow(x,y-1);
 }
+# x^y: O(y)

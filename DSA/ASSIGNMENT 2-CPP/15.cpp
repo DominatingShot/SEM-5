@@ -7,3 +7,5 @@ void reverseprint(vector<int> &v,int i){
     reverseprint(v,i+1);
     cout<<v[i]<<" ";
 }
+
+#O(n)

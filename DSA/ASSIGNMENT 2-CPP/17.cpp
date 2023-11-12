@@ -9,3 +9,4 @@ bool checksorted(vector<int> &v,int i){
     }
     return checksorted(v,i+1);
 }
+#O(n)

@@ -7,3 +7,4 @@ void natn(int n){
     cout<<n<<" ";
     natn(n-1);
 }
+# O(n)

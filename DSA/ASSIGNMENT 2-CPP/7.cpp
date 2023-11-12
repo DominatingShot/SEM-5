@@ -6,3 +6,4 @@ int sumofn(int n){
     }
     return n+sumofn(n-1);
 }
+# O(n)
