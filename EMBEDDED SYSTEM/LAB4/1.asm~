@@ -27,6 +27,6 @@ STOP:   STA 4501H  ; Store the accumulated sum at memory location 4501H
     			HLT         ; Halt the microprocessor		
 
 EVEN:   LDA 4501H  ; Load the content of memory location 4501H to A
-    STA 4502H   ; Store the content of A at memory location 4502H
-    HLT          ; Halt the microprocessor
+    	STA 4502H   ; Store the content of A at memory location 4502H
+    	HLT          ; Halt the microprocessor
 		
