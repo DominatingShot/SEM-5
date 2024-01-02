@@ -1,18 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-void insertionsort(vector<int> &v){
-    int n = v.size();
-    for(int i=1;i<n;i++){
-        int key = v[i];
-        int j = i-1;
-        while(j>=0 && v[j]>key){
-            v[j+1] = v[j];
-            j--;
-        }
-        v[j+1] = key;
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        return helper(nums,0,nums.size()-1);
     }
-}
-
-#a. O(n^2)
-#b. Flag
-#c. Best: Sorted, Worst: Reverse
+    int helper(vector<int>& nums, int l, int r){
+        if(l==r){
+            return nums[l];
+        }
+        int mid = (l+r)/2;
+        int left = helper(nums,l,mid);
+        int right = helper(nums,mid+1,r);
+        int leftwaysum = INT_MIN;
+        int rightwaysum = INT_MIN;
+        for(int i=mid;i>=l;i--){
+            leftwaysum = max(leftwaysum,nums[i]);
+        }
+        for(int i=mid+1;i<=r;i++){
+            rightwaysum = max(rightwaysum,nums[i]);
+        }
+        int cross = leftwaysum+rightwaysum;
+        return max(max(left,right),cross);
+    }
+};
