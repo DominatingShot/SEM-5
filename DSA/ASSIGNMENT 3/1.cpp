@@ -15,7 +15,7 @@ int maxSubArray(vector<int>& nums) {
             if(sum==smax)
                    lmax=currl;
         }
-        cout<<lmax;
+        cout<<lmax<<endl;
         return smax;
     }
 int main(){
