@@ -8,13 +8,23 @@ int maxSubArray(vector<int>& nums) {
             currl++;
             if (sum < 0) {
                 if(sum==smax)
-                   lmax =currl;
+                   lmax=currl;
                 sum = 0;
                 currl = 0;  
             }
             if(sum==smax)
-                   lmax =currl;
+                   lmax=currl;
         }
         cout<<lmax;
         return smax;
     }
+int main(){
+    int n;
+    cin>>n;
+    vector<int> v(n);
+    for(int i=0;i<n;i++){
+        cin>>v.at(i);
+    }
+    cout<<maxSubArray(v);
+    return 0;
+}

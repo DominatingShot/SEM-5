@@ -1,19 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 int maxdifferenceofsubsetsizek(vector<int> v,int k){
+    sort(v.begin(),v.end());
     int n=v.size();
-    int sum=0;
+    int minsum=0,maxsum=0;
     for(int i=0;i<k;i++){
-        sum+=v[i];
+        minsum+=v[i];
     }
-    int maxsum=sum;
-    int minsum=sum;
-    for(int i=k;i<n;i++){
-        sum+=v[i]-v[i-k];
-        maxsum=max(maxsum,sum);
-        minsum=min(minsum,sum);
+    for(int i=n-1;i>=n-k;i--){
+        maxsum+=v[i];
     }
-    cout<<maxsum<<" "<<minsum<<endl;
     return maxsum-minsum;
 }
 int main(){
